@@ -1,8 +1,3 @@
-Bilkul! Ek achhi README file project ke liye bahut zaroori hoti hai.
-
-Yeh lijiye, aapke project ke liye ek complete README.md file. Ismein aapke saare features (OTP, Admin, Image Upload) shaamil hain.
-
-Aap bas is poore text ko copy karke apne project folder mein README.md naam ki file bana kar paste kar sakte hain.
 
 FindItHere: Campus Lost & Found Portal
 A centralized digital solution for managing lost and found items at IIT Jodhpur using modern web technologies.
