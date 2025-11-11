@@ -11,7 +11,7 @@ async function auth(req, res, next) {
 
   try {
     // 1. Auth-Service (jo port 5001 par hai) ko call karein
-    const response = await axios.get('http://localhost:5001/api/auth/verify-token', {
+    const response = await axios.get('http://auth-service:5001/api/auth/verify-token', {
       headers: { 'x-auth-token': token }
     });
 
