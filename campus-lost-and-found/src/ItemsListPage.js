@@ -38,7 +38,7 @@ function ItemsListPage() {
         }
 
         const config = { headers: { 'x-auth-token': token } };
-        const response = await axios.get('http://localhost:5000/api/items/all', config);
+        const response = await axios.get('http://localhost:5002/api/items/all', config);
         setItems(response.data);
         setLoading(false);
       } catch (err) {
@@ -91,7 +91,7 @@ function ItemsListPage() {
       const token = localStorage.getItem('token');
       const config = { headers: { 'x-auth-token': token } };
       const response = await axios.put(
-        `http://localhost:5000/api/admin/claim-item/${itemId}`,
+        `http://localhost:5002/api/admin/claim-item/${itemId}`,
         {},
         config
       );
@@ -151,11 +151,11 @@ function ItemsListPage() {
               
               {/* Image Logic */}
               {item.image ? (
-                <img 
-                  src={`http://localhost:5000/${item.image.replace(/\\/g, '/')}`} 
+                 <img 
+                  src={item.image} 
                   alt={item.itemName} 
-                  className="item-card-image" 
-                />
+                   className="item-card-image" 
+                  />
               ) : (
                 <div className="item-card-no-image">No Image</div>
               )}

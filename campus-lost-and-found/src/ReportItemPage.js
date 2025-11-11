@@ -78,7 +78,7 @@ function ReportItemPage() {
 
       // 5. Send the FormData to the backend
       const response = await axios.post(
-        'http://localhost:5000/api/items/report',
+        'http://localhost:5002/api/items/report',
         dataToSubmit, // Send the FormData object
         config
       );

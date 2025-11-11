@@ -54,7 +54,7 @@ function SignupPage() {
     try {
       // Call the first API
       const response = await axios.post(
-        'http://localhost:5000/api/auth/request-otp', 
+        'http://localhost:5001/api/auth/request-otp', 
         newUser
       );
 
@@ -89,7 +89,7 @@ function SignupPage() {
     try {
       // Call the second API
       const response = await axios.post(
-        'http://localhost:5000/api/auth/verify-otp',
+        'http://localhost:5001/api/auth/verify-otp',
         { email: email, otp: otp } // Send email (from state) and the new OTP
       );
 

@@ -27,7 +27,7 @@ function MyReportsPage() {
 
         // 1. Call your NEW backend API
         const response = await axios.get(
-          'http://localhost:5000/api/items/my-reports',
+          'http://localhost:5002/api/items/my-reports',
           config
         );
 
@@ -59,10 +59,10 @@ function MyReportsPage() {
               
               {item.image ? (
                 <img 
-                  src={`http://localhost:5000/${item.image.replace(/\\/g, '/')}`} 
-                  alt={item.itemName} 
-                  className="item-card-image" 
-                />
+                   src={item.image} 
+                    alt={item.itemName} 
+                    className="item-card-image" 
+/>
               ) : (
                 <div className="item-card-no-image">No Image</div>
               )}

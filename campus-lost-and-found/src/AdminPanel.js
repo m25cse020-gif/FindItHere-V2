@@ -25,7 +25,7 @@ function AdminPanel() {
 
       // 1. Call the new ADMIN API to get PENDING items
       const response = await axios.get(
-        'http://localhost:5000/api/admin/pending-items',
+        'http://localhost:5002/api/admin/pending-items',
         config
       );
 
@@ -61,7 +61,7 @@ function AdminPanel() {
 
       // 2. Call the new ADMIN API to APPROVE the item
       const response = await axios.put(
-        `http://localhost:5000/api/admin/approve-item/${itemId}`,
+        `http://localhost:5002/api/admin/approve-item/${itemId}`,
         {}, // No data needed in the body
         config
       );
@@ -94,9 +94,9 @@ function AdminPanel() {
               
               {item.image ? (
                 <img 
-                  src={`http://localhost:5000/${item.image.replace(/\\/g, '/')}`} 
-                  alt={item.itemName} 
-                  className="item-card-image" 
+                   src={item.image} 
+                   alt={item.itemName} 
+                    className="item-card-image" 
                 />
               ) : (
                 <div className="item-card-no-image">No Image</div>

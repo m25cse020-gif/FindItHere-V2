@@ -21,7 +21,7 @@ function LoginPage() {
     try {
       // 6. Backend API ko call kiya
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'http://localhost:5001/api/auth/login',
         { email, password }
       );
 
@@ -98,8 +98,9 @@ function LoginPage() {
           <p>New user? <Link to="/signup">Sign up here</Link></p>
         </div>
         
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <div className="other-logins">
-        <a href="#">Staff Login</a> | <a href="#">Security Login</a>
+          <a href="#">Staff Login</a> | <a href="#">Security Login</a>
         </div>
         
       </div>
